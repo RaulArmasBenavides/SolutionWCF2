@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = null;
+}
+@model AppWebMVCRest.ViewModels.EmpleadoViewModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+    @using (Html.BeginForm("Edit","Empleados"))
+    {
+        <table cellpadding="2" cellspacing="2">
+            <tr>
+                <td>@Html.LabelFor(model => model.Empleado.IdEmpleado)</td>
+                <td>@Html.ValueFor(model => model.Empleado.IdEmpleado)
+                    @Html.HiddenFor(model => model.Empleado.IdEmpleado)
+                </td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(model=>model.Empleado.Apellidos)</td>
+                <td>@Html.TextBoxFor(model => model.Empleado.Apellidos)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(model => model.Empleado.Nombre)</td>
+                <td>@Html.TextBoxFor(model => model.Empleado.Nombre)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(model => model.Empleado.Cargo)</td>
+                <td>@Html.TextBoxFor(model => model.Empleado.Cargo)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(model => model.Empleado.Direccion)</td>
+                <td>@Html.TextBoxFor(model => model.Empleado.Direccion)</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" value="Actualizar"/></td>
+            </tr>
+
+        </table>
+    }
+   
+</body>
+</html>

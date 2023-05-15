@@ -1,0 +1,42 @@
+﻿@model AppWebMVCRest.Models.Empleado
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>index</title>
+</head>
+<body>
+    <h2>Crud de Empleado</h2>
+    <br />
+   <a href="@Url.Action("Create","Empleados")">Nuevo Empleado</a>
+    <table cellpadding="2" cellspacing="2" border="1">
+        <tr>
+            <th>Codigo</th>
+            <th>Apellidos</th>
+            <th>Nombre</th>
+            <th>Cargo</th>
+            <th>Direccion</th>
+            <th>Opciones</th>
+        </tr>
+        @foreach (var empleado in ViewBag.listEmpleados)
+        {
+            <tr>
+                <td>@empleado.IdEmpleado</td>
+                <td>@empleado.Apellidos</td>
+                <td>@empleado.Nombre</td>
+                <td>@empleado.Cargo</td>
+                <td>@empleado.Direccion</td>
+                <td>
+                    <a href="@Url.Action("Delete","Empleados",new { id=empleado.IdEmpleado})">Eliminar</a>
+                    <a href="@Url.Action("Edit","Empleados",new { id=empleado.IdEmpleado})">Editar</a>
+                </td>
+            </tr>
+        }
+    </table> 
+</body>
+</html>
