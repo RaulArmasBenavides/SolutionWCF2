@@ -5,7 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="634c6d8b18c740919f5ff18a6a46ad75" Name="Diagram1">
-        <EntityTypeShape EntityType="NeptunoModel.EmpleadoEntity" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NeptunoModel.EmpleadoEntity" Width="2.375" PointX="0.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
