@@ -14,16 +14,17 @@ using System.Text;
 
 namespace ServicioWCFRest
 {
-
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerCall,
+    ConcurrencyMode = ConcurrencyMode.Multiple)]
     public class ServicioEmpleado : IServicioEmpleado , IGraphQLService
     {
         private readonly ISchema _schema;
         private readonly IDocumentExecuter _documentExecuter;
 
-        public ServicioEmpleado(ISchema schema)
+        public ServicioEmpleado()
         {
-            _schema = schema;
-            _documentExecuter = new DocumentExecuter();
+            //_schema = schema;
+            //_documentExecuter = new DocumentExecuter();
         }
 
         public bool create(Empleado empleado)
